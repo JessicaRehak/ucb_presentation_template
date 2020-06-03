@@ -1,0 +1,107 @@
+\documentclass[xcolor=x11names, compress, handout]{beamer}
+% \documentclass[xcolor=x11names, compress]{beamer}
+\usepackage{sty/packages}
+\usepackage{sty/commands}
+\usepackage{sty/beamer_style}
+
+
+\AtBeginSection[]{
+  \AtBeginSection[]
+  {
+     \begin{frame}[noframenumbering, plain]
+
+  \frametitle{Outline}
+  %\hfill                        
+  \centering
+  \begin{minipage}[t][0.5\textheight]{0.75\textwidth}
+   \linespread{2.0}
+   \tableofcontents[currentsection]
+ \end{minipage}
+     \end{frame}
+  }
+}
+
+%THIS IS THE INFO AT THE BOTTOM OF YOUR FRAMES
+\title{Presentation}
+\author{J.S. Rehak}
+\date{June \nth{3}, 2020}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain]
+
+\title{Presentation Title\\ \large{Subtitle}}
+
+\author{
+\begin{tabular}{c}
+J. S. Rehak\\
+\vspace{10pt}\\
+\includegraphics[height=2.5cm]{0bk.eps}
+\end{tabular}}
+\date{\vspace{-20pt}\\
+  \begin{tabular}{c}
+    \large{Presentation Context} \\
+ June \nth{3}, 2020
+  \end{tabular}
+}
+
+\titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \centering
+  \begin{minipage}[t][0.5\textheight]{0.75\textwidth}
+   %\linespread{2.0}
+   \tableofcontents
+ \end{minipage}
+\end{frame}
+
+\section{Boltzman Transport Equation}
+
+\frame[c]{\frametitle{Steady-state Boltzman Transport Equation}
+
+  Our problem of interest is the time-independent transport equation
+  on a domain of interest $\rvec \in V$~\cite{lewis1993},
+  
+\begin{align*}
+  &\left[ \oh\cdot  \nabla + \Sigma_t(\rvec,E) \right] \psi(\rvec,E,\oh)\\
+  & \quad \quad \quad= \int_0^{\infty}dE'\int_{4\pi}d\oh'\Sigma_s(\rvec, E'\rightarrow E,\oh'\rightarrow\oh)
+    \psi(\rvec,E',\oh') \\ & \quad \quad \quad+ Q(\rvec, E, \oh)\;,
+\end{align*}
+with a given boundary condition,
+\begin{align*}
+  \psi(\rvec,E,\oh) = \Gamma(\rvec, E, \oh), \quad \rvec \in \partial V,
+  \quad \oh \cdot \hat{n} < 0
+\end{align*}
+}
+
+\section{Section 2}
+\frame[c]{\frametitle{Other stuff}
+
+}
+
+\section{References}
+
+\frame[noframenumbering, plain]{\frametitle{References}
+\tiny{\bibliographystyle{plain}}
+\bibliography{bib/bib}
+}
+
+\appendix
+
+\section{Backup Slides}
+
+\frame[c]{\frametitle{Backup Slide}
+  Backup
+  }
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
